@@ -1,0 +1,24 @@
+{
+    "handlers": [
+        "test",
+        "cowsay",
+        "anime",
+        "catbomb",
+        "8ball",
+        "hug",
+        "karma",
+        "meme",
+        "eliza",
+        "roll",
+        "oksana",
+        "eliza",
+        "compliment",
+        "slap",
+        "totoro",
+	"owo",
+	"difference",
+	"aoe"
+    ],
+    "disabled": [
+    ]
+}
