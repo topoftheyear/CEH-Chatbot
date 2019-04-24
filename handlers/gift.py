@@ -4,7 +4,7 @@ from handlers.message_handler import HandlerModule, MessageHandler
 
 class Module(HandlerModule):
     def __init__(self):
-        super().__init__("gift")
+        super().__init__("gift", persist_state=False)
 
 
     def init_handlers(self):
@@ -17,7 +17,7 @@ class GiftHandler(MessageHandler):
         self.signal = "!gift"
 
         # params to dispay in help meesages
-        self.params = ""
+        self.params = "a gift question"
 
         # displayed when !help is called
         self.short_description = " Gives a gift idea for a person"
@@ -94,5 +94,5 @@ class GiftHandler(MessageHandler):
                     gift_idea_for_you = sibling_gift_ideas[3]
                 gift_idea_for_you = "Something for you sibling huh? How about this?"
             
-            await client.send_message(message.channel, gift_idea_for_you)
+            await message.channel.send(gift_idea_for_you) #client.send_message(message.channel, gift_idea_for_you)
             
