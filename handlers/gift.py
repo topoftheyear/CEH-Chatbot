@@ -72,7 +72,8 @@ class GiftHandler(MessageHandler):
                     gift_idea_for_you = male_gift_ideas[2]
                 elif any(funny_word in message.content for funny_word in funny_keywords):
                     gift_idea_for_you = male_gift_ideas[3]
-                gift_idea_for_you = "Something for your dad huh? How about this?"
+                else:
+                    gift_idea_for_you = "Something for your dad huh? How about this?"
             elif any(mom_word in message.content for mom_word in mom_keywords):
                 if any(cheap_word in message.content for cheap_word in cheap_keywords):
                     gift_idea_for_you = female_gift_ideas[0]
@@ -82,7 +83,8 @@ class GiftHandler(MessageHandler):
                     gift_idea_for_you = female_gift_ideas[2]
                 elif any(funny_word in message.content for funny_word in funny_keywords):
                     gift_idea_for_you = female_gift_ideas[3]
-                gift_idea_for_you = "Something for your mom huh? How about this?"
+                else:
+                    gift_idea_for_you = "Something for your mom huh? How about this?"
             elif any(sibling_word in message.content for sibling_word in sibling_keywords):
                 if any(cheap_word in message.content for cheap_word in cheap_keywords):
                     gift_idea_for_you = sibling_gift_ideas[0]
@@ -92,7 +94,8 @@ class GiftHandler(MessageHandler):
                     gift_idea_for_you = sibling_gift_ideas[2]
                 elif any(funny_word in message.content for funny_word in funny_keywords):
                     gift_idea_for_you = sibling_gift_ideas[3]
-                gift_idea_for_you = "Something for you sibling huh? How about this?"
+                else:
+                    gift_idea_for_you = "Something for you sibling huh? How about this?"
             
             await message.channel.send(gift_idea_for_you) #client.send_message(message.channel, gift_idea_for_you)
             
